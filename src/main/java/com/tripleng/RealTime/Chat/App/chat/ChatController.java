@@ -15,7 +15,7 @@ public class ChatController {
     public ChatMessage sendMessage(
             @Payload ChatMessage chatMessage
     ){
-        chatMessage.setMessageType(MessageType.CHAT);
+//        chatMessage.setMessageType(MessageType.CHAT);
         return chatMessage;
     }
 
@@ -25,7 +25,7 @@ public class ChatController {
             @Payload ChatMessage chatMessage,
             SimpMessageHeaderAccessor headerAccessor
     ){
-        chatMessage.setMessageType(MessageType.JOIN);
+//        chatMessage.setMessageType(MessageType.JOIN);
         headerAccessor.getSessionAttributes().put("username",chatMessage.getSender());
         return chatMessage;
     }
